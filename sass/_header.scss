@@ -2,7 +2,7 @@
 
 header {
     @include border(red);
-    padding: 0 8vw;
+    padding: 0 10vw;
 }
 
 nav {
@@ -33,6 +33,7 @@ nav {
         li {
         	padding-right: 1.5em;
         	font-weight: bolder;
+        	padding-bottom: 0.7em;
         }
     }
     .access {
@@ -40,6 +41,9 @@ nav {
     	button {
     		border: none;
     		font-weight: bolder;
+    		padding: 0.8em 1.5em;
+    		border-radius: 3em;
+    		font-size: 1em;
     	}
     	.login {
     		color: var(--grayish_violet);
@@ -52,6 +56,22 @@ nav {
     }
 }
 
+.header_article {
+	@include border(green);
+	width: 60%;
+	padding: 0;
+	.header_title {
+		font-size: 80px;
+		//@include border(red);
+		margin: 1em 0 0em 0;
+	}
+	.header_paragraph {
+		//@include border(violet);
+		margin: 0 0 3em 0;
+		font-size: 24px;
+		color: var(--grayish_violet)
+	}
+}
 
 @for $i from 1 to 4 {
     .item#{$i} {
