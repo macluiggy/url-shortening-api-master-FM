@@ -1,6 +1,11 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+$manrope: 'Manrope', sans-serif;
+
 :root {
     // Primary
-    --Cyan: hsl(180, 66%, 49%);
+    --cyan: hsl(180, 66%, 49%);
     --dark_violet: hsl(257, 27%, 26%);
 
     // Secondary
@@ -12,3 +17,11 @@
     --very_dark_Blue: hsl(255, 11%, 22%);
     --very_dark_violet: hsl(260, 8%, 14%);
 }
+
+body {
+	font-family: $manrope;
+	font-size: 15px;
+}
+
+@import 'header';
+@import 'mixins';

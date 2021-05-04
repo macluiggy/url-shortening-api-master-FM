@@ -1,11 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
 :root {
-  --Cyan: hsl(180, 66%, 49%);
+  --cyan: hsl(180, 66%, 49%);
   --dark_violet: hsl(257, 27%, 26%);
   --red: hsl(0, 87%, 67%);
   --gray: hsl(0, 0%, 75%);
   --grayish_violet: hsl(257, 7%, 63%);
   --very_dark_Blue: hsl(255, 11%, 22%);
   --very_dark_violet: hsl(260, 8%, 14%);
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+}
+
+header {
+  border: solid red;
+  padding: 0 8vw;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0;
+  margin-top: 2em;
+}
+nav figure {
+  margin: 0 2.5em 0 0;
+  width: 100%;
+}
+nav .nav_list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+nav .nav_list li {
+  padding-right: 1.5em;
+  font-weight: bolder;
+}
+nav .access button {
+  border: none;
+  font-weight: bolder;
+}
+nav .access .login {
+  color: var(--grayish_violet);
+  background-color: transparent;
+}
+nav .access .sign_up {
+  background-color: var(--cyan);
+  color: white;
+}
+
+.item1 {
+  color: var(--grayish_violet);
+}
+
+.item2 {
+  color: var(--grayish_violet);
+}
+
+.item3 {
+  color: var(--grayish_violet);
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,60 @@
+@import 'mixins';
+
+header {
+    @include border(red);
+    padding: 0 8vw;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+    margin-top: 2em;
+
+    figure {
+    	margin: 0 2.5em 0 0;
+        //@include border(red);
+        width: 100%;
+    }
+
+    .logo {
+        //width: 100%;
+       // @include border(yellow);
+    }
+
+    .nav_list {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        //@include border(black);
+        padding: 0;
+
+        li {
+        	padding-right: 1.5em;
+        	font-weight: bolder;
+        }
+    }
+    .access {
+    	//@include border(orange);
+    	button {
+    		border: none;
+    		font-weight: bolder;
+    	}
+    	.login {
+    		color: var(--grayish_violet);
+    		background-color: transparent;
+    	}
+    	.sign_up {
+    		background-color: var(--cyan);
+    		color: white;
+    	}
+    }
+}
+
+
+@for $i from 1 to 4 {
+    .item#{$i} {
+        color: var(--grayish_violet);
+    }
+}
