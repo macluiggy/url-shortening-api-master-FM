@@ -1,6 +1,72 @@
 @import 'mixins';
 
-.shorten_link_form {
-	text-align: center;
-	@include border(red);
+main {
+	padding: 3em 0 0 0;
+    .shorten_link_form {
+    	position: relative;
+        text-align: center;
+        //@include border(red);
+        width: 70%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 72% 18%;
+        grid-gap: 0em 1.5em;
+        justify-content: center;
+        padding: 3em 1.5em 3em 1.5em;
+        margin-bottom: 30px;
+        border-radius: 0.5em;
+        background-image: url('../images/bg-shorten-desktop.svg');
+        background-repeat: no-repeat;
+        background-color: var(--very_dark_violet);
+        input {
+        	border: none;
+        	font-size: 19px;
+        	
+        }
+        ::placeholder {
+        	color: var(--grayish_violet);
+        	opacity: 1;
+        }
+        .user_link {
+        	height: 3.0em;
+        	@include border(white);
+        	border-radius: 0.5em;
+        	font-family: $manrope;
+        	padding: 0 0 0 1.5em;
+        	color: black;
+        	font-weight: bold;
+        }
+        .submit_link {
+        	border-radius: 0.5em;
+        	cursor: pointer;
+        	font-family: $manrope;
+        	background-color: var(--cyan);
+        	color: white;
+        	font-weight: bolder;
+        }
+        .error_message {
+        	color: var(--red);
+        	position: absolute;
+        	bottom: 5%;
+        	left: 7%;
+        }
+    }
+    .shorted_links_container {
+    	@include border(black);
+    	border-radius: 0.5em;
+    	background-color: white;
+    	width: 73%;
+    	margin: auto;
+    	max-height: 300px;
+    	overflow: scroll;
+
+    	.shortened_link {
+    		@include border(red);
+    		border-radius: 0.5em;
+    		display: flex;
+    		justify-content: space-between;
+    		padding: 0 1em;
+    		margin-bottom: 25px;
+    	}
+    }
 }

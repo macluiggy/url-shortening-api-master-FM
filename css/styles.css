@@ -3,7 +3,7 @@
   --cyan: hsl(180, 66%, 49%);
   --dark_violet: hsl(257, 27%, 26%);
   --red: hsl(0, 87%, 67%);
-  --gray: hsl(0, 0%, 75%);
+  --gray: hsl(0, 0%, 97%);
   --grayish_violet: hsl(257, 7%, 63%);
   --very_dark_blue: hsl(255, 11%, 22%);
   --very_dark_violet: hsl(260, 8%, 14%);
@@ -13,6 +13,7 @@ body {
   font-family: "Manrope", sans-serif;
   font-size: 15px;
   position: relative;
+  background-color: var(--gray);
 }
 
 .show {
@@ -230,9 +231,72 @@ nav .access .sign_up:hover {
     font-size: 1.2em;
   }
 }
-.shorten_link_form {
+main {
+  padding: 3em 0 0 0;
+}
+main .shorten_link_form {
+  position: relative;
   text-align: center;
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 72% 18%;
+  grid-gap: 0em 1.5em;
+  justify-content: center;
+  padding: 3em 1.5em 3em 1.5em;
+  margin-bottom: 30px;
+  border-radius: 0.5em;
+  background-image: url("../images/bg-shorten-desktop.svg");
+  background-repeat: no-repeat;
+  background-color: var(--very_dark_violet);
+}
+main .shorten_link_form input {
+  border: none;
+  font-size: 19px;
+}
+main .shorten_link_form ::placeholder {
+  color: var(--grayish_violet);
+  opacity: 1;
+}
+main .shorten_link_form .user_link {
+  height: 3em;
+  border: solid white;
+  border-radius: 0.5em;
+  font-family: "Manrope", sans-serif;
+  padding: 0 0 0 1.5em;
+  color: black;
+  font-weight: bold;
+}
+main .shorten_link_form .submit_link {
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-family: "Manrope", sans-serif;
+  background-color: var(--cyan);
+  color: white;
+  font-weight: bolder;
+}
+main .shorten_link_form .error_message {
+  color: var(--red);
+  position: absolute;
+  bottom: 5%;
+  left: 7%;
+}
+main .shorted_links_container {
+  border: solid black;
+  border-radius: 0.5em;
+  background-color: white;
+  width: 73%;
+  margin: auto;
+  max-height: 300px;
+  overflow: scroll;
+}
+main .shorted_links_container .shortened_link {
   border: solid red;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1em;
+  margin-bottom: 25px;
 }
 
 /*# sourceMappingURL=styles.css.map */
