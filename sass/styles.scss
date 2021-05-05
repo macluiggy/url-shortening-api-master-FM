@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
 $manrope: 'Manrope', sans-serif;
 
+@import 'mixins';
 :root {
     // Primary
     --cyan: hsl(180, 66%, 49%);
@@ -21,8 +22,9 @@ $manrope: 'Manrope', sans-serif;
 body {
 	font-family: $manrope;
 	font-size: 15px;
+	position: relative;
 	//padding: 0 10vw 5vw 10vw;
 }
 
 @import 'header';
-@import 'mixins';
+@import 'main';

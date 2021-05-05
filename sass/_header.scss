@@ -2,7 +2,7 @@
 @import 'burger';
 
 header {
-    @include border(green);
+    //@include border(green);
     padding: 0 0vw 5vw 0vw;
     background-image: url('../images/illustration-working.svg');
     background-repeat: no-repeat;
@@ -24,7 +24,7 @@ nav {
 
     figure {
     	margin: 0 2.5em 0 0;
-        @include border(red);
+        //@include border(red);
     }
 
 
@@ -45,6 +45,11 @@ nav {
         	font-weight: bolder;
         	padding-bottom: 0.7em;
         }
+        li:hover {
+        	cursor: pointer;
+        	@include filter(brightness, 0%);
+        	transition: 0.5s filter;
+        }
     }
     .access {
     	//@include border(orange);
@@ -56,6 +61,7 @@ nav {
     		padding: 0.8em 1.5em;
     		border-radius: 3em;
     		font-size: 1em;
+    		cursor: pointer;
     	}
     	.login {
     		color: var(--grayish_violet);
@@ -64,6 +70,10 @@ nav {
     	.sign_up {
     		background-color: var(--cyan);
     		color: white;
+    	}
+    	.sign_up:hover {
+    		@include filter(opacity, 50%);
+    		transition: filter 0.5s;
     	}
     }
 }
@@ -92,6 +102,11 @@ nav {
 		color: white;
 		font-weight: bolder;
 		border-radius: 3em;
+	} 
+	.get_started:hover {
+		@include filter(opacity, 50%);
+		transition: filter 0.5s;
+		cursor: pointer;
 	}
 }
 
@@ -102,8 +117,8 @@ nav {
 }
 
 @media screen and (max-width: 800px) {
-	header {
-		background-size: 140%;
+	header {//
+		background-size: contain;
 		background-position: 1em 30%;
 		padding: 0 2em 30em 2em;
 		nav {
@@ -152,7 +167,7 @@ nav {
 	}
 	.header_article {
 		position: relative;
-		@include border(green);
+		//@include border(green);
 		top: 30em;
 		width: 100%;
 		text-align: center;

@@ -1,0 +1,6 @@
+@import 'mixins';
+
+.shorten_link_form {
+	text-align: center;
+	@include border(red);
+}

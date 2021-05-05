@@ -7,10 +7,10 @@
 }
 
 #containerBurger {
-    display: inline-block;
+    display: none;
     cursor: pointer;
     position: relative;
-    @include border(red);
+    //@include border(red);
     position: absolute;
     right: 0;
     top: 0;
@@ -38,4 +38,10 @@
 .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
+}
+
+@media screen and (max-width: 800px) {
+    #containerBurger {
+        display: block;
+    }
 }
