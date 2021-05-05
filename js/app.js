@@ -13,3 +13,19 @@ let attribution = $('.attribution')
 let showLink = object => {
 	p(object.result.short_link)
 }
+
+//burguer
+
+    var burger = $('#containerBurger');
+    var lista = $('.nav_list');
+    let access = $('.access');
+
+    burger.addEventListener('click', function() {
+        if (lista.style.display === 'flex') {
+            lista.style.display = 'none';
+            access.style.display = 'none';
+        } else {
+            lista.style.display = 'flex';
+            access.style.display = 'flex';
+        }
+    })

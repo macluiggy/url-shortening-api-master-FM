@@ -1,7 +1,8 @@
 @import 'mixins';
+@import 'burger';
 
 header {
-    @include border(red);
+    @include border(green);
     padding: 0 0vw 5vw 0vw;
     background-image: url('../images/illustration-working.svg');
     background-repeat: no-repeat;
@@ -13,18 +14,19 @@ header {
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
     align-items: center;
     padding-left: 0;
     margin-top: 2em;
     width: 100%;
+    position: relative;
 
     figure {
     	margin: 0 2.5em 0 0;
-        //@include border(red);
-        width: 100%;
+        @include border(red);
     }
+
 
     .logo {
         //width: 100%;
@@ -46,6 +48,8 @@ nav {
     }
     .access {
     	//@include border(orange);
+    	display: flex;
+    	justify-content: flex-end;;
     	button {
     		border: none;
     		font-weight: bolder;
@@ -99,9 +103,52 @@ nav {
 
 @media screen and (max-width: 800px) {
 	header {
-		background-size: 100%;
-		background-position: 5em 30%;
+		background-size: 140%;
+		background-position: 1em 30%;
 		padding: 0 2em 30em 2em;
+		nav {
+			position: absolute;
+			width: 80%;
+			grid-template-columns: 1fr;
+			grid-template-areas: 
+			'logo'
+			'items'
+			'access';
+
+			.logo {
+				grid-area: logo;
+			}
+
+			.nav_list {
+				display: none;
+				grid-area: items;
+				flex-direction: column;
+				margin: 1em 0 0 0;
+				border-radius: 1em 1em 0 0;
+				background-color: var(--very_dark_violet);
+				padding: 2em 2em 1em 2em;
+				li {
+					line-height: 300%;
+					color: white;
+					padding-left: 1.3em;
+				}
+			}
+			.access {
+				display: none;
+				grid-area: access;
+				align-items: center;
+				flex-direction: column;
+				border-radius: 0 0 1em 1em;
+				margin: 0;
+				color: white;
+				background-color: var(--very_dark_violet);
+				padding: 1em 2em 2em 2em;
+				button {
+					width: 80%;
+					color: white !important;
+				}
+			}
+		}
 	}
 	.header_article {
 		position: relative;
@@ -109,5 +156,12 @@ nav {
 		top: 30em;
 		width: 100%;
 		text-align: center;
+		
+		.header_title {
+			font-size: 2.333333333em; // 35px / 15px
+		}
+		.header_paragraph {
+			font-size: 1.2em; //18px 15px 
+		}
 	}
 }

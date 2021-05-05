@@ -19,11 +19,16 @@
 
 <header>
     <nav>
-      
-      <ul class="nav_list">
-        <figure>
+      <figure>
         <img src="images/logo.svg" class="logo">
       </figure>
+      <div id="containerBurger" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+      <ul class="nav_list">
+        
         <li class="item1">Features</li>
         <li class="item2">Pricing</li>
         <li class="item3">Resources</li>
@@ -86,11 +91,11 @@
 
   Resources
 
-  <div id="one">
+
     Blog
   Developers
   Support
-  </div>
+
 
   Company
 
@@ -105,5 +110,10 @@
   </div>
 
   <script type="module" src="js/app.js"></script>
+  <script>
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+    </script>
 </body>
 </html>
