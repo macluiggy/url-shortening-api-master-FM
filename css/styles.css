@@ -258,6 +258,10 @@ main .shorten_link_form ::placeholder {
   color: var(--grayish_violet);
   opacity: 1;
 }
+main .shorten_link_form ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--grayish_violet);
+}
 main .shorten_link_form .user_link {
   height: 3em;
   border: solid white;

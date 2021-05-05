@@ -17,11 +17,12 @@ submit_link.addEventListener('click', (e) => {
         // statement
         return
     } else if (!addUrl.match(regex)) {
-    	$('.error_message').firstChild.innerText = 'Please add a link';
-    	$('.user_link').style.borderColor = 'var(--red)';
+        $('.error_message').firstChild.innerText = 'Please add a link';
+        $('.user_link').style.borderColor = 'var(--red)';
     } else {
         // statement
         $('.error_message').firstChild.innerText = '';
+        $('.user_link').style.borderColor = 'white';
         url = apiBase + 'shorten?url=' + addUrl;
         p('hello')
         fetch(url)
@@ -33,19 +34,34 @@ submit_link.addEventListener('click', (e) => {
         let showLink = object => {
             p(object.result.short_link)
             let links = document.createElement('article');
-            links.innerHTML = `<p>${addUrl}</p> <p>${object.result.short_link} <span>copy</span></p>`
             links.setAttribute('class', 'shortened_link')
+            links.innerHTML = `<p>${addUrl}</p> <p><span class="link_to_copy">${object.result.short_link}</span> <span class="copy_shortened_link">copy</span></p>`;
             $('.shorted_links_container').appendChild(links);
+
+            let copyUrl = $('.copy_shortened_link');
+            copyUrl.addEventListener('click', () => {
+                var text = $('.link_to_copy').innerText;
+                p(text)
+                navigator.clipboard.writeText(text).then(function() {
+                    alert(`Text copied!: ${text}`);
+                }, function(err) {
+                    alert('Async: Could not copy text: ')
+                });
+            });
         }
+
     }
 });
 
+
+
+
 user_link.addEventListener('blur', () => {
-	if (user_link.value == '') {
-		// statement
-		$('.error_message').firstChild.innerText = 'Please add a link';
-		$('.user_link').style.borderColor = 'var(--red)';
-	}
+    if (user_link.value == '') {
+        // statement
+        $('.error_message').firstChild.innerText = 'Please add a link';
+        $('.user_link').style.borderColor = 'var(--red)';
+    }
 })
 
 
