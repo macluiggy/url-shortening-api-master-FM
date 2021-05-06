@@ -11,7 +11,7 @@ $manrope: 'Manrope', sans-serif;
     // Secondary
     --red: hsl(0, 87%, 67%);
     // Neutral
-    --gray: hsl(0, 0%, 97%);
+    --gray: hsl(0, 0%, 93%);
     --grayish_violet: hsl(257, 7%, 63%);
     --very_dark_blue: hsl(255, 11%, 22%);
     --very_dark_violet: hsl(260, 8%, 14%);
@@ -22,7 +22,7 @@ body {
 	font-size: 15px;
 	position: relative;
 	//padding: 0 10vw 5vw 10vw;
-	background-color: var(--gray);
+	
 }
 
 @import 'header';

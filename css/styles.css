@@ -3,7 +3,7 @@
   --cyan: hsl(180, 66%, 49%);
   --dark_violet: hsl(257, 27%, 26%);
   --red: hsl(0, 87%, 67%);
-  --gray: hsl(0, 0%, 97%);
+  --gray: hsl(0, 0%, 93%);
   --grayish_violet: hsl(257, 7%, 63%);
   --very_dark_blue: hsl(255, 11%, 22%);
   --very_dark_violet: hsl(260, 8%, 14%);
@@ -13,7 +13,6 @@ body {
   font-family: "Manrope", sans-serif;
   font-size: 15px;
   position: relative;
-  background-color: var(--gray);
 }
 
 .show {
@@ -95,13 +94,13 @@ nav .nav_list li {
   padding-right: 1.5em;
   font-weight: bolder;
   padding-bottom: 0.7em;
+  transition: 0.5s filter;
 }
 nav .nav_list li:hover {
   cursor: pointer;
   -webkit-filter: brightness(0%);
   -moz-filter: brightness(0%);
   filter: brightness(0%);
-  transition: 0.5s filter;
 }
 nav .access {
   display: flex;
@@ -122,12 +121,12 @@ nav .access .login {
 nav .access .sign_up {
   background-color: var(--cyan);
   color: white;
+  transition: filter 0.5s;
 }
 nav .access .sign_up:hover {
   -webkit-filter: opacity(50%);
   -moz-filter: opacity(50%);
   filter: opacity(50%);
-  transition: filter 0.5s;
 }
 
 .header_article {
@@ -152,12 +151,12 @@ nav .access .sign_up:hover {
   color: white;
   font-weight: bolder;
   border-radius: 3em;
+  transition: filter 0.5s;
 }
 .header_article .get_started:hover {
   -webkit-filter: opacity(50%);
   -moz-filter: opacity(50%);
   filter: opacity(50%);
-  transition: filter 0.5s;
   cursor: pointer;
 }
 
@@ -232,7 +231,11 @@ nav .access .sign_up:hover {
   }
 }
 main {
-  padding: 3em 0 0 0;
+  margin: 3em 0 0 0;
+  background-color: var(--gray);
+  position: relative;
+  border-right: solid red;
+  background: linear-gradient(white 0%, white 10%, var(--gray) 10%, var(--gray) 100%);
 }
 main .shorten_link_form {
   position: relative;
@@ -244,7 +247,6 @@ main .shorten_link_form {
   grid-gap: 0em 1.5em;
   justify-content: center;
   padding: 3em 1.5em 3em 1.5em;
-  margin-bottom: 30px;
   border-radius: 0.5em;
   background-image: url("../images/bg-shorten-desktop.svg");
   background-repeat: no-repeat;
@@ -278,6 +280,12 @@ main .shorten_link_form .submit_link {
   background-color: var(--cyan);
   color: white;
   font-weight: bolder;
+  transition: filter 0.5s;
+}
+main .shorten_link_form .submit_link:hover {
+  -webkit-filter: opacity(80%);
+  -moz-filter: opacity(80%);
+  filter: opacity(80%);
 }
 main .shorten_link_form .error_message {
   color: var(--red);
@@ -286,22 +294,22 @@ main .shorten_link_form .error_message {
   left: 7%;
 }
 main .shorted_links_container {
-  border: solid black;
   border-radius: 0.5em;
-  background-color: white;
+  background-color: transparent;
   width: 73%;
   margin: auto;
-  max-height: 300px;
+  height: 199px;
+  max-height: 200px;
   overflow: auto;
 }
 main .shorted_links_container .shortened_link {
-  border: solid red;
   border-radius: 0.5em;
   display: flex;
   justify-content: space-between;
   padding: 0 1em;
-  margin-bottom: 25px;
+  margin: 25px 0;
   align-items: center;
+  background-color: white;
 }
 main .shorted_links_container .shortened_link .original_link {
   font-size: 20px;
@@ -312,12 +320,20 @@ main .shorted_links_container .shortened_link .link_to_copy {
   color: var(--cyan);
 }
 main .shorted_links_container .shortened_link .copy_shortened_link {
-  border: solid var(--cyan);
   font-size: 18px;
-  padding: 0.3em 1.5em;
+  padding: 0.4em 1.6em;
+  width: 200px;
+  height: 50px;
   background-color: var(--cyan);
   border-radius: 0.3em;
   color: white;
+  cursor: pointer;
+  transition: filter 0.5s;
+}
+main .shorted_links_container .shortened_link .copy_shortened_link:hover {
+  -webkit-filter: opacity(50%);
+  -moz-filter: opacity(50%);
+  filter: opacity(50%);
 }
 
 /*# sourceMappingURL=styles.css.map */

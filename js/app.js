@@ -35,7 +35,7 @@ submit_link.addEventListener('click', (e) => {
             p(object.result.short_link)
             let links = document.createElement('article');
             links.setAttribute('class', 'shortened_link')
-            links.innerHTML = `<p>${addUrl}</p><p><span class="link_to_copy">${object.result.short_link}</span><span class="copy_shortened_link">copy</span></p>`;
+            links.innerHTML = `<p class="original_link">${addUrl}</p><p><span class="link_to_copy">${object.result.short_link}</span><span class="copy_shortened_link">copy</span></p>`;
             $('.shorted_links_container').appendChild(links);
 
             let copyUrls = $$('.copy_shortened_link');
@@ -45,9 +45,12 @@ submit_link.addEventListener('click', (e) => {
                     var text = copyUrl.previousElementSibling.innerText;
                     navigator.clipboard.writeText(text).then(function() {
                         p('copied')
+                        copyUrl.innerText = 'copied!';
+                        copyUrl.style.backgroundColor = 'var(--very_dark_blue)';
                     }, function(err) {
-                        alert('Async: Could not copy text: ')
+                        alert('Async: Could not copy text: ');
                     });
+
                 });
             });
         }

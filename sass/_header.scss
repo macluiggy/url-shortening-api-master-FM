@@ -44,11 +44,11 @@ nav {
         	padding-right: 1.5em;
         	font-weight: bolder;
         	padding-bottom: 0.7em;
+        	transition: 0.5s filter;
         }
         li:hover {
         	cursor: pointer;
         	@include filter(brightness, 0%);
-        	transition: 0.5s filter;
         }
     }
     .access {
@@ -70,10 +70,10 @@ nav {
     	.sign_up {
     		background-color: var(--cyan);
     		color: white;
+    		transition: filter 0.5s;
     	}
     	.sign_up:hover {
     		@include filter(opacity, 50%);
-    		transition: filter 0.5s;
     	}
     }
 }
@@ -102,10 +102,10 @@ nav {
 		color: white;
 		font-weight: bolder;
 		border-radius: 3em;
+		transition: filter 0.5s;
 	} 
 	.get_started:hover {
 		@include filter(opacity, 50%);
-		transition: filter 0.5s;
 		cursor: pointer;
 	}
 }
