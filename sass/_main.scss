@@ -70,7 +70,7 @@ main {
         width: 73%;
         margin: auto;
         max-height: 300px;
-        overflow: scroll;
+        overflow: auto;
 
         .shortened_link {
             @include border(red);
@@ -79,6 +79,28 @@ main {
             justify-content: space-between;
             padding: 0 1em;
             margin-bottom: 25px;
+            align-items: center;
+
+            span {
+            	
+            }
+            .original_link {
+            	font-size: 20px;
+            }
+            .link_to_copy {
+            	//@include border(blue);
+            	font-size: 23px;
+            	margin: 1em;
+            	color: var(--cyan);
+            }
+            .copy_shortened_link {
+            	@include border(var(--cyan));
+            	font-size: 18px;
+            	padding: 0.3em 1.5em;
+            	background-color: var(--cyan);
+            	border-radius: 0.3em;
+            	color: white;
+            }
         }
     }
 }
