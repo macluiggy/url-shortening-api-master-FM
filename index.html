@@ -1,137 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  
-  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
 
-<header>
-    <nav>
-      <figure>
-        <img src="images/logo.svg" class="logo">
-      </figure>
-      <div id="containerBurger" onclick="myFunction(this)">
+<body>
+    <header>
+        <nav>
+            <figure>
+                <img src="images/logo.svg" class="logo">
+            </figure>
+            <div id="containerBurger" onclick="myFunction(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
-      <ul class="nav_list">
-        
-        <li class="item1">Features</li>
-        <li class="item2">Pricing</li>
-        <li class="item3">Resources</li>
-      </ul>
-
-  
-  
-  <div class="access">
-    <button class="login">
-      Login
-    </button>
-    <button class="sign_up">
-      Sign Up
-    </button>
-  </div>
-    </nav>
-
-  <article class="header_article">
-    <h1 class="header_title">More than just shorter links</h1>
-  <p class="header_paragraph">Build your brand’s recognition and get detailed insights 
-  on how your links are performing.</p>
-
-  <button class="get_started">Get Started</button>
-  </article>
-</header>
-  
-  <main>
-    <form class="shorten_link_form">
-      <input type="text" name="link" class="user_link" placeholder="Shorten a link here...">
-      <input type="submit" name="shorten_it" value="Shorten It!" class="submit_link">
-      <p class="error_message"><em></em></p>
-    </form>
-    <div class="shorted_links_container">
-      <!--
+            <ul class="nav_list">
+                <li class="item1">Features</li>
+                <li class="item2">Pricing</li>
+                <li class="item3">Resources</li>
+            </ul>
+            <div class="access">
+                <button class="login">
+                    Login
+                </button>
+                <button class="sign_up">
+                    Sign Up
+                </button>
+            </div>
+        </nav>
+        <article class="header_article">
+            <h1 class="header_title">More than just shorter links</h1>
+            <p class="header_paragraph">Build your brand’s recognition and get detailed insights
+                on how your links are performing.</p>
+            <button class="get_started">Get Started</button>
+        </article>
+    </header>
+    <main>
+        <form class="shorten_link_form">
+            <input type="text" name="link" class="user_link" placeholder="Shorten a link here...">
+            <input type="submit" name="shorten_it" value="Shorten It!" class="submit_link">
+            <p class="error_message"><em></em></p>
+        </form>
+        <div class="shorted_links_container">
+            <!--
        AQUI VAN LOS LINKS
 
        
      -->
-      <article class="shortened_link">
-        <p class="original_link">www.goole.com</p> <p ><span class="link_to_copy">byt.li</span><span class="copy_shortened_link">copy</span></p>
-      </article>
-      <article class="shortened_link">
-        <p class="original_link">www.goole.com</p> <p ><span class="link_to_copy">byt.li</span><span class="copy_shortened_link">copy</span></p>
-      </article>
+            <article class="shortened_link">
+                <p class="original_link">www.goole.com</p>
+                <p><span class="link_to_copy">byt.li</span><span class="copy_shortened_link">copy</span></p>
+            </article>
+            <article class="shortened_link">
+                <p class="original_link">www.goole.com</p>
+                <p><span class="link_to_copy">byt.li</span><span class="copy_shortened_link">copy</span></p>
+            </article>
+        </div>
+        <article class="main_description">
+            <h2 class="main_title">Advanced Statistics</h2>
+            <p class="main_title_paragraph">Track how your links are performing across the web with our
+                advanced statistics dashboard.</p>
+        </article>
+        <section class="cards_description">
+            <div class="cyan_line"></div>
+            <article class="card1">
+              <figure>
+                  <img src="images/icon-brand-recognition.svg" alt="brand recognition">
+              </figure>
+                <h3>Brand Recognition</h3>
+                <p>Boost your brand recognition with each click. Generic links don’t
+                    mean a thing. Branded links help instil confidence in your content.</p>
+            </article>
+            <article class="card2">
+                <figure>
+                  <img src="images/icon-detailed-records.svg" alt="brand recognition">
+              </figure>
+                <h3>Detailed Records</h3>
+                <p>Gain insights into who is clicking your links. Knowing when and where
+                    people engage with your content helps inform better decisions.</p>
+            </article>
+            <article class="card3">
+                <figure>
+                  <img src="images/icon-fully-customizable.svg" alt="brand recognition">
+              </figure>
+                <h3>Fully Customizable</h3>
+                <p>Improve brand awareness and content discoverability through customizable
+                    links, supercharging audience engagement.</p>
+            </article>
+        </section>
+        <section class="boost_your_link_today">
+            Boost your links today
+            Get Started
+        </section>
+    </main>
+    <footer>Frontend
+        Features
+        Link Shortening
+        Branded Links
+        Analytics
+        Resources
+        Blog
+        Developers
+        Support
+        Company
+        About
+        Our Team
+        Careers
+        Contact</footer>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
     </div>
-<article class="main_description">
-  <h2  class="main_title">Advanced Statistics</h2>
-
-  <p class="main_title_paragraph">Track how your links are performing across the web with our 
-  advanced statistics dashboard.</p>
-</article>
-
-  Brand Recognition
-
-  Boost your brand recognition with each click. Generic links don’t 
-  mean a thing. Branded links help instil confidence in your content.
-
-  Detailed Records
-
-  Gain insights into who is clicking your links. Knowing when and where 
-  people engage with your content helps inform better decisions.
-
-  Fully Customizable
-
-  Improve brand awareness and content discoverability through customizable 
-  links, supercharging audience engagement.
-
-  </main>
-  Boost your links today
-
-  Get Started
-
-  Features
-
-  Link Shortening
-  Branded Links
-  Analytics
-
-  Resources
-
-
-    Blog
-  Developers
-  Support
-
-
-  Company
-
-  About
-  Our Team
-  Careers
-  Contact
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-
-  <script type="module" src="js/app.js"></script>
-  <script>
+    <script type="module" src="js/app.js"></script>
+    <script>
     function myFunction(x) {
         x.classList.toggle("change");
     }
     </script>
 </body>
+
 </html>

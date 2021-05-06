@@ -234,7 +234,6 @@ main {
   margin: 3em 0 0 0;
   background-color: var(--gray);
   position: relative;
-  border-right: solid red;
   background: linear-gradient(white 0%, white 10%, var(--gray) 10%, var(--gray) 100%);
 }
 main .shorten_link_form {
@@ -350,6 +349,84 @@ main .shorted_links_container .shortened_link .copy_shortened_link:hover {
   .shorted_links_container .shortened_link .original_link {
     font-size: 5vw !important;
   }
+}
+.main_description {
+  text-align: center;
+}
+.main_description h2 {
+  font-size: 2.6666666667em;
+  line-height: 100%;
+}
+.main_description p {
+  font-size: 1.2em;
+  width: 37%;
+  margin: auto;
+  color: var(--grayish_violet);
+}
+
+@media screen and (max-width: 800px) {
+  .main_description h2 {
+    font-size: 30px;
+  }
+  .main_description p {
+    width: 80%;
+    font-size: 1.3333333333em;
+  }
+}
+.cards_description {
+  display: flex;
+  border: solid green;
+  height: 350px;
+  width: 80%;
+  margin: auto;
+  background-image: url("../images/");
+  position: relative;
+}
+.cards_description .cyan_line {
+  border: solid 4px var(--cyan);
+  position: absolute;
+  width: 90%;
+  top: 45%;
+  left: 5%;
+}
+.cards_description figure {
+  background-color: var(--very_dark_blue);
+  width: fit-content;
+  padding: 1.5em;
+  position: absolute;
+  top: -23%;
+  left: -5%;
+  border-radius: 50%;
+}
+.cards_description .card1 {
+  align-self: flex-start;
+}
+.cards_description .card2 {
+  align-self: center;
+}
+.cards_description .card3 {
+  align-self: flex-end;
+}
+.cards_description .card1 {
+  background-color: white;
+  padding: 4em 2em 1em 2em;
+  margin: 1em;
+  border-radius: 0.5em;
+  position: relative;
+}
+.cards_description .card2 {
+  background-color: white;
+  padding: 4em 2em 1em 2em;
+  margin: 1em;
+  border-radius: 0.5em;
+  position: relative;
+}
+.cards_description .card3 {
+  background-color: white;
+  padding: 4em 2em 1em 2em;
+  margin: 1em;
+  border-radius: 0.5em;
+  position: relative;
 }
 
 /*# sourceMappingURL=styles.css.map */
