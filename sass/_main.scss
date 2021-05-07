@@ -171,10 +171,10 @@ main {
 
 .cards_description {
 	display: flex;
-	@include border(green);
-	height: 350px;
+	//@include border(green);
+	height: 60vh;
 	width: 80%;
-	margin: auto;
+	margin: 7em auto;
 	background-image: url('../images/');
 	position: relative;
 
@@ -182,7 +182,7 @@ main {
 		border: solid 4px var(--cyan);
 		position: absolute;
 		width: 90%;
-		top: 45%;
+		top: 48%;
 		left: 5%
 	}
 	figure {
@@ -193,15 +193,34 @@ main {
 		top: -23%;
 		left: -5%;
 		border-radius: 50%;
+		text-align: center;
+		display: inline-block;
+		img {
+			width: 100%;
+			margin: auto;
+		}
 	}
 	.card1 {
 		align-self: flex-start;
+		position: relative;
+		z-index: 1;
+	}
+	.card1::after {
+		content: '';
+		@include border(var(--cyan));
+		position: absolute;
+		width: 120%;
+		left: 100%;
+		bottom: 27%;
+		z-index: 0;
 	}
 	.card2 {
 		align-self: center;
+		z-index: 2;
 	}
 	.card3 {
 		align-self: flex-end;
+		z-index: 3;
 	}
 
 	@for $i from 1 to 4 {
@@ -211,6 +230,59 @@ main {
 			margin: 1em;
 			border-radius: 0.5em;
 			position: relative;
+			width: 100%;
+
+			h3 {
+				font-size: 1.3333333333333333em;
+			}
+			p {
+				font-size: 1em;
+				color: var(--grayish_violet);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.cards_description {
+		flex-direction: column;
+		height: fit-content;
+		text-align: center;
+
+		.card1::after {
+			width: 0%;
+			left: 50%;
+			bottom: -192%;
+			height: 190%;
+		}
+		@for $j from 1 to 4 {
+			.card#{$j} {
+				align-self: center;
+				width: 90%;
+				margin-bottom: 7em;
+
+				h3 {
+					font-size: 30px;
+				}
+				p {
+					font-size: 20px;
+				}
+			}
+		}
+		.cyan_line {
+			transform: rotate(90deg);
+			position: relative !important;
+			width: 1000px;
+			top: 0%;
+			left: -70%;
+			right: 0%;
+			position: relative;
+		}
+
+		figure {
+			left: 25%;
+			top: -20%;
+			padding: 2em;
 		}
 	}
 }
