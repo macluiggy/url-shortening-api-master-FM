@@ -35,7 +35,7 @@ submit_link.addEventListener('click', (e) => {
             p(object.result.short_link)
             let links = document.createElement('article');
             links.setAttribute('class', 'shortened_link')
-            links.innerHTML = `<p class="original_link">${addUrl}</p><p><span class="link_to_copy">${object.result.short_link}</span><span class="copy_shortened_link">copy</span></p>`;
+            links.innerHTML = `<p class="original_link">${addUrl}</p><p><span class="link_to_copy">${object.result.short_link}</span><button class="copy_shortened_link">copy</button></p>`;
             $('.shorted_links_container').appendChild(links);
 
             let copyUrls = $$('.copy_shortened_link');
