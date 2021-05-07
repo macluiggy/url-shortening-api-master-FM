@@ -25,5 +25,17 @@
 		-webkit-filter: opacity($val);
 		-moz-filter: opacity($val);
 		filter: opacity($val);
+	} @else if $function == invert {
+		-webkit-filter: invert($val);
+		-moz-filter: invert($val);
+		filter: invert($val);
+	} @else if $function == contrast {
+		-webkit-filter: contrast($val);
+		-moz-filter: contrast($val);
+		filter: contrast($val);
+	} @else if $function == saturate {
+		-webkit-filter: saturate($val);
+		-moz-filter: saturate($val);
+		filter: saturate($val);
 	}
 }

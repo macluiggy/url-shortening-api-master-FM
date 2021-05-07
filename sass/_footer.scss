@@ -1,0 +1,16 @@
+@import 'mixins';
+
+footer {
+	background-color: var(--very_dark_blue);
+	color: white;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 2fr 3fr 1.5fr;
+	@include border(var(--very_dark_violet));
+
+	.footer_logo_container {
+		img {
+			@include filter(invert, 200%);
+		}
+	}
+}

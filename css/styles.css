@@ -536,8 +536,9 @@ main .shorted_links_container .shortened_link .copy_shortened_link:hover {
   padding: 1em 2em 3em 2em;
   background-image: url("../images/bg-boost-desktop.svg");
   background-color: var(--very_dark_violet);
+  margin: 0;
 }
-.boost_your_link_today h2 {
+.boost_your_link_today > h2 {
   font-size: 2.6666666667em;
   padding: 0;
   color: white;
@@ -568,6 +569,19 @@ main .shorted_links_container .shortened_link .copy_shortened_link:hover {
   .boost_your_link_today button {
     font-size: 1.7em;
   }
+}
+footer {
+  background-color: var(--very_dark_blue);
+  color: white;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 2fr 3fr 1.5fr;
+  border: solid var(--very_dark_violet);
+}
+footer .footer_logo_container img {
+  -webkit-filter: invert(200%);
+  -moz-filter: invert(200%);
+  filter: invert(200%);
 }
 
 /*# sourceMappingURL=styles.css.map */
