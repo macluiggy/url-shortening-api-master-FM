@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [repository](https://github.com/macluiggy/url-shortening-api-master-FM)
+- Live Site URL: [GitHub Page](https://macluiggy.github.io/url-shortening-api-master-FM)
 
 ## My process
 
@@ -49,18 +49,15 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
+- CSS transitions
+- Media queries
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- [Sass](https://sass-lang.com/) - CSS preprocessor
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
+This was he first time I used an API Rest from the <a href="https://shrtco.de/">shrtcode website</a>:
 
 ```html
 <h1>Some HTML code I'm proud of</h1>
