@@ -62,7 +62,7 @@ This was he first time I used an API Rest, the API is from the <a href="https://
             .catch(() => alert('Sorry, there was an error, please try again!'));
 ```
 
- Then I used the then method to put a function in it as a parameter which convert the JSON file in a JavaScript object, then the function showLink() is called, this will show the shortened link to the user, here is the code I used: used:
+ Then I used the then method to put a function in it as a parameter which convert the JSON file in a JavaScript object, then the function showLink() is called, this will show the shortened link to the user, here is the code I used:
 
 ```js
 let showLink = object => {
@@ -73,7 +73,7 @@ let showLink = object => {
             $('.shorted_links_container').appendChild(links);
 
 ```
-To copy the link to the clipboard I used the navigator API, when the links are added, a button is added to, do when a user click in it, it call an event and the API do its work, this is the code:
+To copy the link to the clipboard I used the navigator API, when the links are added, a button is added too, do when a user click in it, it call an event and the API do its work, this is the code:
 
 ```js
 copyUrls.forEach(copyUrl => {
