@@ -34,8 +34,8 @@ Users should be able to:
 ### Screenshot
 
 <p float="left">
-  <img src="desktop.jpeg" width="70%" > 
-<img src="mobile.jpeg" width="20%" >
+  <img src="desktop.jpeg" width="70%" align="left"> 
+<img src="mobile.jpeg" width="20%" align="right">
 </p>
 
 
