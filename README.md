@@ -73,7 +73,7 @@ let showLink = object => {
             $('.shorted_links_container').appendChild(links);
 
 ```
-To copy the link to the clipboard I used the navigator API, when the links are added, a button is added too, do when a user click in it, it call an event and the API do its work, this is the code:
+To copy the link to the clipboard I used the navigator API, when the links are added, a button is added too, so when a user click in it, it call an event and the API do its work, this is the code:
 
 ```js
 copyUrls.forEach(copyUrl => {
