@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Screenshot
 
-<img src="desktop.jpeg" width="71%" align="top"> 
-<img src="mobile.jpeg" width="25%" align="top">
+<img src="desktop.jpeg" width="70%" align="top"> 
+<img src="mobile.jpeg" width="20%" align="top">
 
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
