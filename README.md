@@ -73,6 +73,25 @@ let showLink = object => {
             $('.shorted_links_container').appendChild(links);
 
 ```
+To copy the link to the clipboard I used the navigator API, when the links are added, a button is added to, do when a user click in it, it call an event and the API do its work, this is the code:
+
+```js
+copyUrls.forEach(copyUrl => {
+                // statements
+                copyUrl.addEventListener('click', () => {
+                    var text = copyUrl.previousElementSibling.innerText;
+                    navigator.clipboard.writeText(text).then(function() {
+                        p('copied')
+                        copyUrl.innerText = 'copied!';
+                        copyUrl.style.backgroundColor = 'var(--very_dark_blue)';
+                    }, function(err) {
+                        alert('Async: Could not copy text: ');
+                    });
+
+                });
+            });
+```
+
 I also used mixins to automatize the filters function, to prevent problems with different browsers, this is the code:
 
 ```scss
