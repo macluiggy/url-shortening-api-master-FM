@@ -34,7 +34,7 @@ Users should be able to:
 ### Screenshot
 
 <img src="desktop.jpeg" width="70%" align="top"> 
-<img src="mobile.jpeg" width="20%" align="right">
+<img src="mobile.jpeg" width="20%" align="right top">
 
 
 ### Links
