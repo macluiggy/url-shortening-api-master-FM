@@ -43,13 +43,13 @@ submit_link.addEventListener('click', (e) => {//cuando el usuario presoina el bo
             copyUrls.forEach(copyUrl => { // para cada boton
                 // statements
                 copyUrl.addEventListener('click', () => { //llama un evento para el boton actual
-                    var text = copyUrl.previousElementSibling.innerText;
-                    navigator.clipboard.writeText(text).then(function() {
+                    var text = copyUrl.previousElementSibling.innerText;//obten el texto del link acortado
+                    navigator.clipboard.writeText(text).then(function() {//llama a la api navigator y usa la promesa writeText
                         p('copied')
-                        copyUrl.innerText = 'copied!';
-                        copyUrl.style.backgroundColor = 'var(--very_dark_blue)';
+                        copyUrl.innerText = 'copied!';// muestra en pantalla que el link fue opidado
+                        copyUrl.style.backgroundColor = 'var(--very_dark_blue)';//cambia el color cuando haya sido copidado el link
                     }, function(err) {
-                        alert('Async: Could not copy text: ');
+                        alert('Async: Could not copy text: ');// muestra el mensaje de error si hubo uno
                     });
 
                 });
@@ -62,27 +62,27 @@ submit_link.addEventListener('click', (e) => {//cuando el usuario presoina el bo
 
 
 
-user_link.addEventListener('blur', () => {
-    if (user_link.value == '') {
+user_link.addEventListener('blur', () => { // si el ususario le da click a el input rext y luego desenfoca llama al evento blur
+    if (user_link.value == '') {// si no dejo texto luego de desenfocar
         // statement
-        $('.error_message').firstChild.innerText = 'Please add a link';
-        $('.user_link').style.borderColor = 'var(--red)';
+        $('.error_message').firstChild.innerText = 'Please add a link';//muestra el mensaje de error
+        $('.user_link').style.borderColor = 'var(--red)';//y cambia el color del borde el inpur text a rojo
     }
 })
 
 
 //burguer
 
-var burger = $('#containerBurger');
-var lista = $('.nav_list');
-let access = $('.access');
+var burger = $('#containerBurger');// el contenedor de la hamburguesa
+var lista = $('.nav_list');//la lista
+let access = $('.access');//el contenedor de los botones para iniciar sesion o registrarse
 
-burger.addEventListener('click', function() {
-    if (lista.style.display === 'flex') {
-        lista.style.display = 'none';
-        access.style.display = 'none';
+burger.addEventListener('click', function() {//cuando haga click en la hamburguesa
+    if (lista.style.display === 'flex') {//si el estylo display es igual a flex
+        lista.style.display = 'none';//cambia tanto la lista
+        access.style.display = 'none';//como el contenedor de los botones a none
     } else {
-        lista.style.display = 'flex';
-        access.style.display = 'flex';
+        lista.style.display = 'flex'; //si no cabia tanto la lista
+        access.style.display = 'flex';// como el contenedor de los botones a flex
     }
 })
