@@ -33,10 +33,7 @@ Users should be able to:
 
 ### Screenshot
 
-<p float="left">
-  <img src="desktop.jpeg" width="100"> 
-<img src="mobile.jpeg" width="100">
-</p>
+<img src="desktop.jpeg">
 
 
 ### Links
