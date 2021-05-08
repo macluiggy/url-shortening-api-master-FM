@@ -1,158 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
+# Frontend Mentor - Shortly URL shortening API Challenge solution
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <title>Frontend Mentor | Launch countdown timer</title>
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-    .attribution {
-        font-size: 11px;
-        text-align: center;
-    }
-    /*variables*/
-/*COLORS*/
-/*primary*/
-/*neutral*/
-/*Typography*/
-/*functions*/
-/*The above is just visible in the scss file*/
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
-body {
-  font-size: 14px;
-  font-family: "Red Hat Text", sans-serif;
-  background-color: #191a24;
-  position: relative;
-  margin: 0 auto;
-  min-height: 100vh;
-  min-width: 300px;
-}
+This is a solution to the [Shortly URL shortening API Challenge challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-.title-container {
-  color: white;
-  text-align: center;
-  width: 90%;
-  margin: 0 auto;
-  padding: 6em 0;
-}
-.title-container h1 {
-  font-size: 1.2857143em;
-  /* 18px / 14px*/
-  font-weight: normal;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  width: 90%;
-  margin: 0 auto;
-}
+## Table of contents
 
-.time-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(3em, 1fr));
-  width: 50%;
-  margin: 0 auto;
-}
-.time-container .time {
-  color: #8486a9;
-  text-align: center;
-  padding: 2em;
-  font-size: 1.5vw;
-}
-.time-container .watch {
-  color: #fb6087;
-  text-align: center;
-  font-size: 5vw;
-  font-weight: bold;
-}
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-.attribution {
-  color: white;
+**Note: Delete this note and update the table of contents based on what sections you keep.**
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for the site depending on their device's screen size
+- Shorten any valid URL
+- See a list of their shortened links, even after refreshing the browser
+- Copy the shortened link to their clipboard in a single click
+- Receive an error message when the `form` is submitted if:
+  - The `input` field is empty
+
+### Screenshot
+
+![desktop](./desktop.jpeg) ![mobile](./mobile.jpeg)
+
+Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+
+Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+
+Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+
+**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+
+### Links
+
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- [Styled Components](https://styled-components.com/) - For styles
+
+**Note: These are just examples. Delete this note and replace the list above with your own choices**
+
+### What I learned
+
+Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+
+To see how you can add code snippets, see below:
+
+```html
+<h1>Some HTML code I'm proud of</h1>
+```
+```css
+.proud-of-this-css {
+  color: papayawhip;
 }
-
-.attribution a {
-  color: #fb6087;
+```
+```js
+const proudOfThisFunc = () => {
+  console.log('🎉')
 }
+```
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-footer figure {
-  display: flex;
-  justify-content: center;
-}
-footer figure img {
-  padding: 1em;
-  cursor: pointer;
-}
+If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
-@media screen and (max-width: 600px) {
-  .time-container {
-    width: 90%;
-  }
-  .time-container .watch {
-    font-size: 2.5rem;
-  }
-  .time-container .time {
-    font-size: 0.6rem;
-  }
-}
+**Note: Delete this note and the content within this section and replace with your own learnings.**
 
-/*# sourceMappingURL=styles.css.map */
+### Continued development
 
-    </style>
-</head>
+Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
-<body>
-    <main>
-        <div class="title-container">
-            <!--<h1>We're launching soon</h1>-->
-        </div>
-        <div class="time-container">
-            <div class="days-container">
-                <div class="watch watch-days">T</div>
-                <div class="days time">Days</div>
-            </div>
-            <div class="hour-container">
-                <div class="watch watch-hours">I</div>
-                <div class="hours time">Hours</div>
-            </div>
-            <div class="minutes-container">
-                <div class="watch watch-minutes">M</div>
-                <div class="minutes time">Minutes</div>
-            </div>
-            <div class="seconds-container">
-                <div class="watch watch-seconds">E</div>
-                <div class="seconds time">Seconds</div>
-            </div>
-        </div>
+**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
-        <!--
-          LA PRIMERA VEZ APRENDIENDO A USAR MIXIN CON FOR EN SASS
-          <div class="text-container">
-          <div class="text-1">hello</div>
-        <div class="text-2">hello</div>
-        <div class="text-3">hello</div>
-        <div class="text-4">hello</div>
-        </div>
-        -->
-    </main>
-    <footer>
-      <figure id="imgs-container">
-        <!--<img src="images/icon-facebook.svg">
-        <img src="images/icon-pinterest.svg">
-        <img src="images/icon-instagram.svg">-->
-      </figure>
-      <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="https://www.frontendmentor.io/profile/macluiggy" target="_blank">Luiggy Macias</a>.
-    </div>
-    </footer>
-    
-    <script type="module" src="js/app.js"></script>
-</body>
+### Useful resources
+[w3school](https://www.w3schools.com/) and [stackoverflow](https://stackoverflow.com/) were of great help to solve some doubts.
 
-</html>
+## Author
+
+- Frontend Mentor - [@macluiggy](https://www.frontendmentor.io/profile/macluiggy)
+- LinkedIn - [Luiggy Macias](https://www.linkedin.com/in/luiggy-macias-402696155/)
