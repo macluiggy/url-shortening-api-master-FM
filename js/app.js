@@ -28,6 +28,7 @@ submit_link.addEventListener('click', (e) => {
         fetch(url)
             .then(jsonObject => jsonObject.json())
             .then(object => showLink(object))
+            .catch(() => alert('Sorry, there was an error, please try again!'));
 
         let attribution = $('.attribution')
 

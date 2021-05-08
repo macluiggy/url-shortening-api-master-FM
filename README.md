@@ -57,31 +57,60 @@ Users should be able to:
 
 ### What I learned
 
-This was he first time I used an API Rest from the <a href="https://shrtco.de/">shrtcode website</a>:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+This was he first time I used an API Rest from the <a href="https://shrtco.de/">shrtcode website</a>. The format in which the data from the api is brought is JSON, I used the fetch promise to bring the json object, this is the code:
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+        fetch(url)
+            .then(jsonObject => jsonObject.json())
+            .then(object => showLink(object))
+            .catch(() => alert('Sorry, there was an error, please try again!'));
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+ Then I used the then method to put a function in it as a parameter which convert the JSON file in a JavaScript object, then the function showLink() is called, this will show the shortened link to the user, here is the code I used: used:
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+```js
+let showLink = object => {
+            p(object.result.short_link)
+            let links = document.createElement('article');
+            links.setAttribute('class', 'shortened_link')
+            links.innerHTML = `<p class="original_link">${addUrl}</p><p><span class="link_to_copy">${object.result.short_link}</span><button class="copy_shortened_link">copy</button></p>`;
+            $('.shorted_links_container').appendChild(links);
 
-### Continued development
+```
+I also used mixins to automatize the filters function, to prevent problems with different browsers, this is the code:
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+```scss
+@mixin filter($function, $val) {
+  @if $function == brightness {
+    -webkit-filter: brightness($val);
+    -moz-filter: brightness($val);
+    filter: brightness($val);
+  } @else if $function == grayscale {
+    -webkit-filter: grayscale($val);
+    -moz-filter: grayscale($val);
+    filter: grayscale($val);
+  } @else if $function == drop-shadow {
+    -webkit-filter: drop-shadow($val);
+    -moz-filter: drop-shadow($val);
+    filter: drop-shadow($val);
+  } @else if $function == opacity {
+    -webkit-filter: opacity($val);
+    -moz-filter: opacity($val);
+    filter: opacity($val);
+  } @else if $function == invert {
+    -webkit-filter: invert($val);
+    -moz-filter: invert($val);
+    filter: invert($val);
+  } @else if $function == contrast {
+    -webkit-filter: contrast($val);
+    -moz-filter: contrast($val);
+    filter: contrast($val);
+  } @else if $function == saturate {
+    -webkit-filter: saturate($val);
+    -moz-filter: saturate($val);
+    filter: saturate($val);
+  }
+}
+```
 
 ### Useful resources
 [w3school](https://www.w3schools.com/) and [stackoverflow](https://stackoverflow.com/) were of great help to solve some doubts.
