@@ -54,7 +54,7 @@ Users should be able to:
 
 ### What I learned
 
-This was he first time I used an API Rest from the <a href="https://shrtco.de/">shrtcode website</a>. The format in which the data from the api is brought is JSON, I used the fetch promise to bring the json object, this is the code:
+This was he first time I used an API Rest, the API is from the <a href="https://shrtco.de/">shrtcode website</a>. The format in which the data from the api is brought is JSON, I used the fetch promise to bring the json object, this is the code:
 ```js
         fetch(url)
             .then(jsonObject => jsonObject.json())
