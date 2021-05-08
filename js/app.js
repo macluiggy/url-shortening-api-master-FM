@@ -10,7 +10,7 @@ var expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-
 var regex = new RegExp(expression); // se crea una nueva expresion regular con la variable anterior
 
 p(user_link);
-submit_link.addEventListener('click', (e) => {//cuando el usuario presoina el boton para acortar el link se llama a un evento
+submit_link.addEventListener('click', (e) => {//cuando el usuario presiona el boton para acortar el link se llama a un evento
     e.preventDefault()// se previene la accion por defecto
     let addUrl = user_link.value // se actualiza el link que el usuario agregó
     if (user_link.value == '') {// si el el input text esta vacio, no se hace nada
