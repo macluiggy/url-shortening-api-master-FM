@@ -33,12 +33,16 @@ footer {
 				//@include border(violet);//
 				cursor: pointer;
 			}
+			h4:hover {
+				text-decoration: underline;
+			}
 			li {
 				line-height: 250%;
 				font-size: 0.86666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666667em; // 13px / 15px
 				color: var(--grayish_violet);
 				transition: color 0.5s;
 				cursor: pointer;
+				//border: solid red;
 			}
 			li:hover {
 				color: var(--cyan);
@@ -52,7 +56,7 @@ footer {
 		}
 		img:hover {
 			cursor: pointer;
-		}
+			filter: saturate(8);		}
 	}
 }
 
@@ -72,7 +76,7 @@ footer {
 		}
 		.social_media {
 			text-align: center;
-			@include border(red);
+			//@include border(red);
 			width: 100%;
 			margin: auto;
 

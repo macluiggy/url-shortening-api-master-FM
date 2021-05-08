@@ -612,6 +612,9 @@ footer .links_container .links_list h4 {
   padding: 0;
   cursor: pointer;
 }
+footer .links_container .links_list h4:hover {
+  text-decoration: underline;
+}
 footer .links_container .links_list li {
   line-height: 250%;
   font-size: 0.8666666667em;
@@ -627,6 +630,7 @@ footer .social_media img {
 }
 footer .social_media img:hover {
   cursor: pointer;
+  filter: saturate(8);
 }
 
 @media screen and (max-width: 800px) {
@@ -641,7 +645,6 @@ footer .social_media img:hover {
   }
   footer .social_media {
     text-align: center;
-    border: solid red;
     width: 100%;
     margin: auto;
   }
